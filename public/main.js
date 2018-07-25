@@ -10,6 +10,19 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
+firebase.auth().onAuthStateChanged(function(user) {
+    window.user = user;
+    console.log(user);
+    if (user){
+        console.log("Log Out");
+    }else{
+        console.log("Log In");
+    }
+    // Step 1:
+    //  If no user, sign in anonymously with firebase.auth().signInAnonymously()
+    //  If there is a user, log out out user details for debugging purposes.
+});
+
 var countRef = database.ref('count/');
 
 countRef.on('value', function(snapshot) {
