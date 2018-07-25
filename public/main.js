@@ -1,15 +1,28 @@
-const rootRef = firebase.database().ref();
-const pageCountsRef = rootRef.child("pageCounts");
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyDDanO0n2i2Ymm3aitGBEX_YZ2xpS7YStc",
+    authDomain: "mission6-e271b.firebaseapp.com",
+    databaseURL: "https://mission6-e271b.firebaseio.com",
+    projectId: "mission6-e271b",
+    storageBucket: "mission6-e271b.appspot.com",
+    messagingSenderId: "690464434018"
+};      
+firebase.initializeApp(config);
+var database = firebase.database();
 
-var postData = {
-    page: location.pathname,
-    count: 1, 
-    lastvisit: firebase.database.ServerValue.TIMESTAMP,
-    lastreferrer: document.referrer
-}; 
+var countRef = database.ref('count/');
 
-pageCountsRef.push(postData);
+countRef.on('value', function(snapshot) {
+    count = snapshot.val().value;
+    document.getElementById("demo").innerHTML = count;
+});
 
-// Create an object to store copy of the saved db data
-let obj = {};
+
+function clickFunction() {
+    count++;
+    document.getElementById("demo").innerHTML = count;
+    database.ref('count/').set({
+        value: count
+    });
+}
 

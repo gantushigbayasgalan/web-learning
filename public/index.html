@@ -6,20 +6,20 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDDanO0n2i2Ymm3aitGBEX_YZ2xpS7YStc",
-        authDomain: "mission6-e271b.firebaseapp.com",
-        databaseURL: "https://mission6-e271b.firebaseio.com",
-        projectId: "mission6-e271b",
-        storageBucket: "mission6-e271b.appspot.com",
-        messagingSenderId: "690464434018"
-    };      
-    firebase.initializeApp(config);
-    </script>    
     <script src="main.js"></script>
+    <style>
+        .center {
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
 </head>
 <body>
+    <div class="center">
+        <p id="demo">0</p>
+        <button onclick="clickFunction()">Click</button>
+    </div>
 </body>
 </html>
