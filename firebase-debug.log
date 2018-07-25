@@ -1,0 +1,73 @@
+[debug] [2018-07-25T04:22:47.958Z] ----------------------------------------------------------------------
+[debug] [2018-07-25T04:22:47.962Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2018-07-25T04:22:47.962Z] CLI Version:   3.19.3
+[debug] [2018-07-25T04:22:47.962Z] Platform:      linux
+[debug] [2018-07-25T04:22:47.962Z] Node Version:  v9.11.2
+[debug] [2018-07-25T04:22:47.962Z] Time:          Wed Jul 25 2018 12:22:47 GMT+0800 (+08)
+[debug] [2018-07-25T04:22:47.962Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-25T04:22:47.975Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-25T04:22:47.975Z] > authorizing via signed-in user
+[debug] [2018-07-25T04:22:47.978Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-07-25T04:22:47.978Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/DQrt6Or6LmzGu98DvJQpVPOCiWEaHAwv6-A8woVm6SI',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Jul 25 2018 12:22:47 GMT+0800 (+08)
+[debug] [2018-07-25T04:22:49.027Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-25T04:22:49.089Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mission6-e271b  
+  
+ Wed Jul 25 2018 12:22:49 GMT+0800 (+08)
+[debug] [2018-07-25T04:22:50.293Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-25T04:22:50.295Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mission6-e271b/tokens  
+  
+ Wed Jul 25 2018 12:22:50 GMT+0800 (+08)
+[debug] [2018-07-25T04:22:51.206Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-25T04:22:51.208Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mission6-e271b  
+  
+ Wed Jul 25 2018 12:22:51 GMT+0800 (+08)
+[debug] [2018-07-25T04:22:54.339Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/gantushig/Documents/firebase/mission6'...
+[info] 
+[debug] [2018-07-25T04:22:54.345Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/690464434018/clients/_:getWebAppConfig  
+  
+ Wed Jul 25 2018 12:22:54 GMT+0800 (+08)
+[debug] [2018-07-25T04:22:56.140Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-07-25T04:48:30.317Z] ----------------------------------------------------------------------
+[debug] [2018-07-25T04:48:30.320Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2018-07-25T04:48:30.321Z] CLI Version:   3.19.3
+[debug] [2018-07-25T04:48:30.321Z] Platform:      linux
+[debug] [2018-07-25T04:48:30.321Z] Node Version:  v9.11.2
+[debug] [2018-07-25T04:48:30.321Z] Time:          Wed Jul 25 2018 12:48:30 GMT+0800 (+08)
+[debug] [2018-07-25T04:48:30.321Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-25T04:48:30.391Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-25T04:48:30.391Z] > authorizing via signed-in user
+[debug] [2018-07-25T04:48:30.394Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mission6-e271b  
+  
+ Wed Jul 25 2018 12:48:30 GMT+0800 (+08)
+[debug] [2018-07-25T04:48:34.999Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-25T04:48:35.001Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/mission6-e271b/tokens  
+  
+ Wed Jul 25 2018 12:48:35 GMT+0800 (+08)
+[debug] [2018-07-25T04:48:35.864Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-25T04:48:35.865Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mission6-e271b  
+  
+ Wed Jul 25 2018 12:48:35 GMT+0800 (+08)
+[debug] [2018-07-25T04:48:37.599Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/gantushig/Documents/firebase/mission6'...
+[info] 
+[debug] [2018-07-25T04:48:37.603Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/690464434018/clients/_:getWebAppConfig  
+  
+ Wed Jul 25 2018 12:48:37 GMT+0800 (+08)
+[debug] [2018-07-25T04:48:39.123Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+

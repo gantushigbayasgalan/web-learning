@@ -5,28 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDDanO0n2i2Ymm3aitGBEX_YZ2xpS7YStc",
+        authDomain: "mission6-e271b.firebaseapp.com",
+        databaseURL: "https://mission6-e271b.firebaseio.com",
+        projectId: "mission6-e271b",
+        storageBucket: "mission6-e271b.appspot.com",
+        messagingSenderId: "690464434018"
+    };      
+    firebase.initializeApp(config);
+    </script>    
     <script src="main.js"></script>
-
-    <style>
-        .center {
-            height: auto; 
-            position: absolute;
-            /* width: 100%; */
-            top: 50%;
-            left: 50%;
-        }
-        #panel {
-            width: 100px;
-            height: 50px;
-            background-color: black;
-            margin: 10px;
-        }
-    </style>
 </head>
 <body>
-    <div class="center">
-        <p id="demo">0</p>
-        <button onclick="myFunction()">Login</button>
-    </div>        
 </body>
 </html>
