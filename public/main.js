@@ -1,41 +1,50 @@
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyDDanO0n2i2Ymm3aitGBEX_YZ2xpS7YStc",
-    authDomain: "mission6-e271b.firebaseapp.com",
-    databaseURL: "https://mission6-e271b.firebaseio.com",
-    projectId: "mission6-e271b",
-    storageBucket: "mission6-e271b.appspot.com",
-    messagingSenderId: "690464434018"
-};      
-firebase.initializeApp(config);
-var database = firebase.database();
+    var config = {
+        apiKey: "AIzaSyDDanO0n2i2Ymm3aitGBEX_YZ2xpS7YStc",
+        authDomain: "mission6-e271b.firebaseapp.com",
+        databaseURL: "https://mission6-e271b.firebaseio.com",
+        projectId: "mission6-e271b",
+        storageBucket: "mission6-e271b.appspot.com",
+        messagingSenderId: "690464434018"
+    };      
+    firebase.initializeApp(config);
 
-firebase.auth().onAuthStateChanged(function(user) {
-    window.user = user;
-    console.log(user);
-    if (user){
-        console.log("Log Out");
-    }else{
-        console.log("Log In");
-    }
-    // Step 1:
-    //  If no user, sign in anonymously with firebase.auth().signInAnonymously()
-    //  If there is a user, log out out user details for debugging purposes.
-});
+    var database = firebase.database();
 
-var countRef = database.ref('count/');
+    const auth = firebase.auth();
 
-countRef.on('value', function(snapshot) {
-    count = snapshot.val().value;
-    document.getElementById("demo").innerHTML = count;
-});
+    const btnLogin = document.getElementById('btnLogin');
+    const btnLogout = document.getElementById('btnLogout');
 
-
-function clickFunction() {
-    count++;
-    document.getElementById("demo").innerHTML = count;
-    database.ref('count/').set({
-        value: count
+    btnLogin.addEventListener('click', e => {
+        console.log(firebase);
+        auth.signInAnonymously();
     });
-}
 
+    btnLogout.addEventListener('click', e => {
+        auth.signOut();
+    });
+
+    auth.onAuthStateChanged(firebaseUser => {
+        console.log(firebaseUser);
+        if (firebaseUser) {
+            btnLogout.classList.remove('hidden');
+        } else {
+            btnLogout.classList.add('hidden');
+        }
+    });
+
+    var countRef = database.ref('count/');
+    
+    countRef.on('value', function(snapshot) {
+        count = snapshot.val().value;
+        document.getElementById("demo").innerHTML = count;
+    });
+    
+    
+    function clickFunction() {
+        count++;
+        document.getElementById("demo").innerHTML = count;
+        database.ref('count/').set({
+            value: count
+        });
+    }

@@ -5,21 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-    <script src="main.js"></script>
-    <style>
+    <style media="screen">
         .center {
             height: auto;
             position: absolute;
             top: 50%;
             left: 50%;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="center">
+        <h1>Welcome to my page</h1>
+        <p>I know you are there, I just don't know who you are</p>
+        <ul>
+            <li><a id="btnLogin" href="#">Login Anonymously</a></li>
+            <li><a id="btnLogout" href="#" class="hidden">Logout</a></li>
+        </ul>
         <p id="demo">0</p>
         <button onclick="clickFunction()">Click</button>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
