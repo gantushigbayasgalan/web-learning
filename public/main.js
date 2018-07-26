@@ -12,24 +12,29 @@
 
     const auth = firebase.auth();
 
-    const btnLogin = document.getElementById('btnLogin');
-    const btnLogout = document.getElementById('btnLogout');
+    const login = document.getElementById('login');
+    const logout = document.getElementById('logout');
+    const btnClick = document.getElementById('btnClick');
 
-    btnLogin.addEventListener('click', e => {
+    document.getElementById('btnLogin').addEventListener('click', e => {
         console.log(firebase);
         auth.signInAnonymously();
     });
 
-    btnLogout.addEventListener('click', e => {
+    document.getElementById('btnLogout').addEventListener('click', e => {
         auth.signOut();
     });
 
     auth.onAuthStateChanged(firebaseUser => {
         console.log(firebaseUser);
         if (firebaseUser) {
-            btnLogout.classList.remove('hidden');
+            login.classList.add('hidden');
+            logout.classList.remove('hidden');
+            btnClick.classList.remove('hidden');
         } else {
-            btnLogout.classList.add('hidden');
+            login.classList.remove('hidden');
+            logout.classList.add('hidden');
+            btnClick.classList.add('hidden');
         }
     });
 

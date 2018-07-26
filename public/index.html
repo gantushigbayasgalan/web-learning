@@ -13,6 +13,7 @@
     <style media="screen">
         .center {
             height: auto;
+            width: 500px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -23,15 +24,14 @@
     </style>
 </head>
 <body>
-    <div class="center">
-        <h1>Welcome to my page</h1>
+    <div class="container">
+        <h1>Welcome to my page <b id="demo"></b></h1>
         <p>I know you are there, I just don't know who you are</p>
-        <ul>
-            <li><a id="btnLogin" href="#">Login Anonymously</a></li>
-            <li><a id="btnLogout" href="#" class="hidden">Logout</a></li>
+        <ul class="list-group">
+            <li id="login" class="list-group-item"><a id="btnLogin" href="#">Login Anonymously</a></li>
+            <li id="logout" class="list-group-item"><a id="btnLogout" href="#">Logout</a></li>
         </ul>
-        <p id="demo">0</p>
-        <button onclick="clickFunction()">Click</button>
+        <button id="btnClick" class="btn btn-medium btn-success" onclick="clickFunction()">Click</button>
     </div>
     <script src="main.js"></script>
 </body>
